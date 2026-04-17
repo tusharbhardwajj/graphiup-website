@@ -3,10 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Graphiup Agency</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<meta name="theme-color" content="#0b0b0f">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -102,7 +103,6 @@ nav a:hover{color:white}
   border-radius:20px;
   background:rgba(255,255,255,0.04);
   transition:0.4s;
-  cursor:pointer;
 }
 .card:hover{
   transform:translateY(-10px);
@@ -182,12 +182,10 @@ nav a:hover{color:white}
   text-decoration:none;
   color:white;
   transition:0.4s;
-  position:relative;
-  overflow:hidden;
 }
 
 .contact-card:hover{
-  transform:translateY(-10px) scale(1.03);
+  transform:translateY(-10px);
   box-shadow:0 0 40px rgba(255,0,204,0.3);
 }
 
@@ -196,13 +194,12 @@ nav a:hover{color:white}
   margin-bottom:15px;
 }
 
-/* ANIMATION */
+/* SCROLL ANIMATION */
 .reveal{
   opacity:0;
   transform:translateY(60px);
-  transition:all 0.8s ease;
+  transition:0.8s;
 }
-
 .reveal.active{
   opacity:1;
   transform:translateY(0);
@@ -213,6 +210,34 @@ footer{
   text-align:center;
   padding:30px;
   color:#777;
+}
+
+/* 📱 MOBILE */
+@media (max-width:768px){
+
+  header{
+    padding:15px 20px;
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  nav{
+    margin-top:10px;
+  }
+
+  .hero h1{font-size:32px}
+  .hero p{font-size:15px}
+
+  .services, .process, .portfolio-grid, .contact-box{
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .card, .step, .video-box, .contact-card{
+    width:90%;
+  }
+
+  .video-box{height:200px}
 }
 
 </style>
@@ -245,84 +270,63 @@ footer{
     <div class="card reveal"><h3>🚀 Influencer Marketing</h3><p>We connect your brand with creators.</p></div>
     <div class="card reveal"><h3>🎬 Content Creation</h3><p>Viral content that grabs attention.</p></div>
     <div class="card reveal"><h3>📊 Brand Strategy</h3><p>Stand out in your market.</p></div>
-    <div class="card reveal"><h3>💰 Paid Ads</h3><p>ROI-focused campaigns.</p></div>
-    <div class="card reveal"><h3>🎥 Video Editing</h3><p>Cinematic, high-engagement edits.</p></div>
+    <div class="card reveal"><h3>💰 Paid Ads</h3><p>ROI campaigns.</p></div>
+    <div class="card reveal"><h3>🎥 Video Editing</h3><p>Cinematic edits.</p></div>
   </div>
 </section>
 
 <section class="section">
   <h2 class="reveal">Our Process</h2>
   <div class="process">
-    <div class="step reveal">🎯 Strategy<br><small>Growth roadmap</small></div>
-    <div class="step reveal">🤝 Creators<br><small>Right influencers</small></div>
-    <div class="step reveal">⚙️ Execution<br><small>Launch content</small></div>
-    <div class="step reveal">📈 Scale<br><small>Optimize growth</small></div>
+    <div class="step reveal">🎯 Strategy</div>
+    <div class="step reveal">🤝 Creators</div>
+    <div class="step reveal">⚙️ Execution</div>
+    <div class="step reveal">📈 Scale</div>
   </div>
 </section>
 
 <section class="section portfolio">
   <h2 class="reveal">Our Work</h2>
-
   <div class="portfolio-grid">
-
     <div class="video-box reveal">
       <iframe src="https://www.youtube.com/embed/Ywe8_vtdIXA" allowfullscreen></iframe>
     </div>
-
     <div class="video-box reveal">
       <iframe src="https://www.youtube.com/embed/8OgUgDCxpus" allowfullscreen></iframe>
     </div>
-
     <a href="https://www.instagram.com/reel/DMXbywXPDEX/" target="_blank" class="video-box ig-box reveal">
       🎬 View Instagram Reel
     </a>
-
   </div>
 </section>
 
 <section class="section" id="contact">
   <h2 class="reveal">Contact Us</h2>
-
   <div class="contact-box">
     <a href="mailto:graphiiup@gmail.com" class="contact-card reveal">
-      <div class="icon">📧</div>
-      <h3>Email</h3>
-      <p>graphiiup@gmail.com</p>
+      <div class="icon">📧</div><h3>Email</h3><p>graphiiup@gmail.com</p>
     </a>
-
-    <a href="https://wa.me/917303987848?text=Hi%20I%20want%20to%20work%20with%20Graphiup" class="contact-card reveal">
-      <div class="icon">💬</div>
-      <h3>WhatsApp</h3>
-      <p>Chat instantly</p>
+    <a href="https://wa.me/917303987848" class="contact-card reveal">
+      <div class="icon">💬</div><h3>WhatsApp</h3><p>Chat instantly</p>
     </a>
-
     <div class="contact-card reveal">
-      <div class="icon">📞</div>
-      <h3>Call</h3>
-      <p>7303987848<br>7011152691</p>
+      <div class="icon">📞</div><h3>Call</h3><p>7303987848<br>7011152691</p>
     </div>
   </div>
 </section>
 
 <footer>
-  <p>© 2026 Graphiup. All rights reserved.</p>
+  <p>© 2026 Graphiup</p>
 </footer>
 
 <script>
-window.addEventListener("scroll", reveal);
-
-function reveal(){
-  let reveals = document.querySelectorAll(".reveal");
-
-  for(let i=0; i<reveals.length; i++){
-    let windowHeight = window.innerHeight;
-    let elementTop = reveals[i].getBoundingClientRect().top;
-
-    if(elementTop < windowHeight - 100){
-      reveals[i].classList.add("active");
+window.addEventListener("scroll", function(){
+  document.querySelectorAll(".reveal").forEach(el=>{
+    if(el.getBoundingClientRect().top < window.innerHeight - 100){
+      el.classList.add("active");
     }
-  }
-}
+  });
+});
 </script>
 
 </body>
