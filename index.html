@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Graphiup Agency</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+  font-family:'Poppins',sans-serif;
+  background: radial-gradient(circle at top,#1a1a2e,#0b0b0f);
+  color:white;
+  scroll-behavior:smooth;
+}
+
+/* NAVBAR */
+header{
+  position:fixed;
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  padding:20px 60px;
+  background:rgba(0,0,0,0.5);
+  backdrop-filter:blur(10px);
+  z-index:1000;
+}
+
+.logo{
+  font-size:24px;
+  font-weight:700;
+  background:linear-gradient(90deg,#ff7b00,#ff00cc);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+nav a{
+  margin-left:25px;
+  text-decoration:none;
+  color:#ccc;
+}
+nav a:hover{color:white}
+
+/* HERO */
+.hero{
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:0 20px;
+}
+
+.hero h1{
+  font-size:60px;
+}
+
+.hero p{
+  margin-top:20px;
+  color:#aaa;
+  max-width:700px;
+  line-height:1.6;
+}
+
+/* BUTTON */
+.btn{
+  margin-top:25px;
+  padding:14px 30px;
+  background:linear-gradient(90deg,#ff7b00,#ff00cc);
+  border-radius:30px;
+  text-decoration:none;
+  color:white;
+  transition:0.3s;
+}
+.btn:hover{
+  transform:scale(1.08);
+  box-shadow:0 0 30px rgba(255,0,204,0.5);
+}
+
+/* SECTION */
+.section{
+  padding:100px 20px;
+  text-align:center;
+}
+
+/* SERVICES */
+.services{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+
+.card{
+  width:280px;
+  margin:15px;
+  padding:25px;
+  border-radius:20px;
+  background:rgba(255,255,255,0.04);
+  transition:0.4s;
+  cursor:pointer;
+}
+.card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 0 30px rgba(255,0,204,0.2);
+}
+
+.card h3{margin-bottom:10px}
+.card p{color:#bbb;font-size:14px}
+
+/* PROCESS */
+.process{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+.step{
+  margin:20px;
+  padding:20px;
+  border-radius:15px;
+  background:rgba(255,255,255,0.05);
+}
+
+/* PORTFOLIO */
+.portfolio-grid{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  margin-top:40px;
+}
+
+.video-box{
+  width:300px;
+  height:180px;
+  margin:15px;
+  border-radius:15px;
+  overflow:hidden;
+  background:#111;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  transition:0.4s;
+}
+
+.video-box iframe{
+  width:100%;
+  height:100%;
+}
+
+.video-box:hover{
+  transform:scale(1.05);
+  box-shadow:0 0 30px rgba(255,0,204,0.3);
+}
+
+.ig-box{
+  text-decoration:none;
+  color:white;
+  font-size:18px;
+  background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);
+}
+
+/* CONTACT */
+.contact-box{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  margin-top:40px;
+}
+
+.contact-card{
+  width:260px;
+  margin:15px;
+  padding:30px;
+  border-radius:20px;
+  background:rgba(255,255,255,0.04);
+  text-align:center;
+  text-decoration:none;
+  color:white;
+  transition:0.4s;
+  position:relative;
+  overflow:hidden;
+}
+
+.contact-card:hover{
+  transform:translateY(-10px) scale(1.03);
+  box-shadow:0 0 40px rgba(255,0,204,0.3);
+}
+
+.icon{
+  font-size:35px;
+  margin-bottom:15px;
+}
+
+/* ANIMATION */
+.reveal{
+  opacity:0;
+  transform:translateY(60px);
+  transition:all 0.8s ease;
+}
+
+.reveal.active{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:30px;
+  color:#777;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">Graphiup</div>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1 class="reveal">Turn Attention Into Influence</h1>
+  <p class="reveal">
+  GraphiUp creates visuals for the digital world. From video editing and videography to social media content,
+  we help brands show up better, stronger, and more confidently online.
+  Designs are modern. Stories are clear. Impact is the goal.
+  </p>
+  <a href="#contact" class="btn reveal">Contact Us</a>
+</section>
+
+<section class="section" id="services">
+  <h2 class="reveal">Our Services</h2>
+  <div class="services">
+    <div class="card reveal"><h3>🚀 Influencer Marketing</h3><p>We connect your brand with creators.</p></div>
+    <div class="card reveal"><h3>🎬 Content Creation</h3><p>Viral content that grabs attention.</p></div>
+    <div class="card reveal"><h3>📊 Brand Strategy</h3><p>Stand out in your market.</p></div>
+    <div class="card reveal"><h3>💰 Paid Ads</h3><p>ROI-focused campaigns.</p></div>
+    <div class="card reveal"><h3>🎥 Video Editing</h3><p>Cinematic, high-engagement edits.</p></div>
+  </div>
+</section>
+
+<section class="section">
+  <h2 class="reveal">Our Process</h2>
+  <div class="process">
+    <div class="step reveal">🎯 Strategy<br><small>Growth roadmap</small></div>
+    <div class="step reveal">🤝 Creators<br><small>Right influencers</small></div>
+    <div class="step reveal">⚙️ Execution<br><small>Launch content</small></div>
+    <div class="step reveal">📈 Scale<br><small>Optimize growth</small></div>
+  </div>
+</section>
+
+<section class="section portfolio">
+  <h2 class="reveal">Our Work</h2>
+
+  <div class="portfolio-grid">
+
+    <div class="video-box reveal">
+      <iframe src="https://www.youtube.com/embed/Ywe8_vtdIXA" allowfullscreen></iframe>
+    </div>
+
+    <div class="video-box reveal">
+      <iframe src="https://www.youtube.com/embed/8OgUgDCxpus" allowfullscreen></iframe>
+    </div>
+
+    <a href="https://www.instagram.com/reel/DMXbywXPDEX/" target="_blank" class="video-box ig-box reveal">
+      🎬 View Instagram Reel
+    </a>
+
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <h2 class="reveal">Contact Us</h2>
+
+  <div class="contact-box">
+    <a href="mailto:graphiiup@gmail.com" class="contact-card reveal">
+      <div class="icon">📧</div>
+      <h3>Email</h3>
+      <p>graphiiup@gmail.com</p>
+    </a>
+
+    <a href="https://wa.me/917303987848?text=Hi%20I%20want%20to%20work%20with%20Graphiup" class="contact-card reveal">
+      <div class="icon">💬</div>
+      <h3>WhatsApp</h3>
+      <p>Chat instantly</p>
+    </a>
+
+    <div class="contact-card reveal">
+      <div class="icon">📞</div>
+      <h3>Call</h3>
+      <p>7303987848<br>7011152691</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Graphiup. All rights reserved.</p>
+</footer>
+
+<script>
+window.addEventListener("scroll", reveal);
+
+function reveal(){
+  let reveals = document.querySelectorAll(".reveal");
+
+  for(let i=0; i<reveals.length; i++){
+    let windowHeight = window.innerHeight;
+    let elementTop = reveals[i].getBoundingClientRect().top;
+
+    if(elementTop < windowHeight - 100){
+      reveals[i].classList.add("active");
+    }
+  }
+}
+</script>
+
+</body>
+</html>
